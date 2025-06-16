@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammed Sufiyan Awan – Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to right, #f8f8f8, #e0e0f8);
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        header {
+            height: 100vh;
+            background: url(18.jpg) no-repeat center center/cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+
+        header::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+
+        header h1,
+        header p {
+            z-index: 2;
+        }
+
+        header h1 {
+            font-size: 3.5rem;
+        }
+
+        header p {
+            font-size: 1.5rem;
+            margin-top: 1rem;
+            font-style: italic;
+        }
+
+        nav {
+            background: #ffffff;
+            display: flex;
+            justify-content: center;
+            padding: 25px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 999;
+            font-size: 1.2rem;
+        }
+
+        nav a {
+            margin: 0 20px;
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #6a5acd;
+        }
+
+        section {
+            padding: 80px 20px;
+            max-width: 1000px;
+            margin: auto;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.6s ease-out;
+        }
+
+        section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: #6a5acd;
+            border-left: 5px solid #6a5acd;
+            padding-left: 15px;
+        }
+
+        ul {
+            list-style: none;
+            line-height: 2;
+            padding-left: 0;
+        }
+
+        li {
+            font-size: 1.1rem;
+        }
+
+        #contact form input,
+        #contact form textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 1rem;
+        }
+
+        #contact form button {
+            background-color: #6a5acd;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            cursor: pointer;
+            font-size: 1rem;
+            border-radius: 6px;
+            transition: background 0.3s;
+        }
+
+        #contact form button:hover {
+            background-color: #5a4acb;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        a {
+            color: #6a5acd;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Muhammed Sufiyan Awan</h1>
+        <p>Legend of AI/ML</p>
+    </header>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#certificates">Certificates</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Hi, I'm a creative developer and AI/ML enthusiast currently studying at Aptech Academy, Karachi. I love
+            combining design with logic to build beautiful, efficient, and meaningful digital experiences. My mission is
+            to innovate, solve problems, and contribute to the future of technology.</p>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li><strong>Web Development:</strong> HTML, CSS & JavaScript</li>
+            <li><strong>Graphic Design:</strong> Canva, Photoshop</li>
+        </ul>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <ul>
+            <li><a href="https://sufiankhan-code.github.io/Book/" target="_blank">Glass Calculator</a></li>
+            <li><a href="https://sufiankhan-code.github.io/full-portfolio/index.html" target="_blank">Portfolio
+                    Website</a></li>
+            <li><a href="https://sufiankhan-code.github.io/AI-Landing-Page/" target="_blank">AI Landing Page</a></li>
+        </ul>
+    </section>
+
+    <section id="certificates">
+        <h2>Certificates</h2>
+        <ul>
+            <li>Graphic Design – Click 5 Academy</li>
+            <li>English Speaking – Click 5 Academy</li>
+        </ul>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Let's connect! Reach out to me through the form below or email me directly.</p>
+        <p>Email: <a href="mailto:muhammedsufianawan1@gmail.com">muhammedsufianawan1@gmail.com</a></p>
+        <form action="https://formsubmit.co/muhammedsufianawan1@gmail.com" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>© 2025 Muhammed Sufiyan Awan. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Smooth scrolling
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                target.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+
+        // Section animation on scroll
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+
+</html>
